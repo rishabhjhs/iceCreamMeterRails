@@ -40,6 +40,8 @@ gem 'rack-cors', :require => 'rack'
 gem 'simple_command'
 gem 'bcrypt', '~> 3.1.7'
 gem 'react_on_rails', '~> 11.1', '>= 11.1.8'
+gem 'webpacker'
+gem 'react-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -73,3 +75,4 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pry', '~> 0.10.3'
+gem 'mini_racer', platforms: :ruby

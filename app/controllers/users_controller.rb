@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def index
     @user = User.all
-    render :json => {:users => @user}
+    render :json => {body: @user}
   end
 
   def new
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
       render :json => {:body => @user}
       return
     end
-    render :json => {:error => "email already exist"}
+    render :json => {:body =>"Email already exist"}
   end
 
   def show
@@ -98,7 +98,7 @@ class UsersController < ApplicationController
   end
 
   def update_params
-    params.require(:user).permit(:name, :email, :password, :phone)
+    params.require(:user).permit(:name, :email)
   end
 end
 
